@@ -1,0 +1,45 @@
+/* Center the login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  background-color: #181818; /* Background color */
+}
+
+/* Style the login form */
+.login-form {
+  background-color: #222;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Control the form width */
+}
+
+/* Make the buttons and inputs more prominent */
+input, button {
+  font-size: 1.1rem; /* Larger font size */
+  border-radius: 8px;
+}
+
+/* Add focus styles to the input fields */
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.2);
+}
+
+/* Styling the button */
+button {
+  background-color: #4caf50; /* Green button */
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
