@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignInForm from './SignIn.jsx';
-import SignUpForm from './SignUp.jsx';
+import SignInForm from './SignIn';
+import SignUpForm from './SignUp';
 import Dashboard from './Dashboard';
 import './styles.css';
 

@@ -6,8 +6,7 @@ Starting the project
 
 Backend
 1)go to same folder s pom.xml
-2) run the command 
-
+2) run the command mvn spring-boot:run
 
 Frontend
 1).mvn clean install  (if required)
@@ -31,6 +30,9 @@ Backend: cd backend && ./mvnw spring-boot:run
 Frontend: cd frontend && npm run dev
 This will resolve your issue! 🚀
 
+uploading to github
+
+git init
 git add .
 git commit -m "Updated project"
 git push origin main
