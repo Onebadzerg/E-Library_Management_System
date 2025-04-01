@@ -1,21 +1,15 @@
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignInForm from './SignIn';
-import SignUpForm from './SignUp';
-import Dashboard from './Dashboard';
-import './styles.css';
+import { Routes, Route } from 'react-router-dom';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
-function AppWrapper() {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<SignInForm />} />
-        <Route path="/signup" element={<SignUpForm />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
+    </Routes>
   );
 }
 
-export default AppWrapper;
+export default App;

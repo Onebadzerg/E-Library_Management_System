@@ -1,77 +1,46 @@
 package com.example.lms_backend.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name = "member")
 public class Member {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int memberId;
-
-    @Column(name = "member_name")
-    private String memberName;
-
-    @Column(name = "member_password")
-    private String memberPassword;
-
-    @Column(name = "member_email")
-    private String memberEmail;
-
-    @Column(name = "member_hp")
-    private String memberHp;
-
-    @Column(name = "is_admin")
-    private String isAdmin;
-
-    // Getters and Setters
-
-    public int getMemberId() {
-        return memberId;
+    private Long id;
+    
+    private String username;
+    private String password;
+    
+    // Default constructor
+    public Member() {}
+    
+    // Parameterized constructor
+    public Member(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
-
-    public void setMemberId(int memberId) {
-        this.memberId = memberId;
+    
+    // Getters and setters
+    public Long getId() {
+        return id;
     }
-
-    public String getMemberName() {
-        return memberName;
+    public void setId(Long id) {
+        this.id = id;
     }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
+    public String getUsername() {
+        return username;
     }
-
-    public String getMemberPassword() {
-        return memberPassword;
+    public void setUsername(String username) {
+        this.username = username;
     }
-
-    public void setMemberPassword(String memberPassword) {
-        this.memberPassword = memberPassword;
+    public String getPassword() {
+        return password;
     }
-
-    public String getMemberEmail() {
-        return memberEmail;
-    }
-
-    public void setMemberEmail(String memberEmail) {
-        this.memberEmail = memberEmail;
-    }
-
-    public String getMemberHp() {
-        return memberHp;
-    }
-
-    public void setMemberHp(String memberHp) {
-        this.memberHp = memberHp;
-    }
-
-    public String getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(String isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
